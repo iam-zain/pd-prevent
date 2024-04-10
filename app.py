@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/methylation-test')
+def methylationTest():
+    return render_template('methylationTest.html')
+
 @app.route('/box')
 def box():
     return render_template('box.html')
