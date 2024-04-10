@@ -240,11 +240,11 @@ for i in range(num_columns):
     column = tests_scores[i][0]
     user_data = tests_scores[i][1]
     user_data = np.array(user_data).reshape(-1, 1)
-    LASSO_model = joblib.load(column + '_Lasso_model.joblib')
+    LASSO_model = joblib.load('joblibs/' + column + '_Lasso_model.joblib')
     Lasso_prediction = LASSO_model.predict(user_data)
-    svmL_model = joblib.load(column + '_svmL_model.joblib')
+    svmL_model = joblib.load('joblibs/' + column + '_svmL_model.joblib')
     SVM_prediction = svmL_model.predict(user_data)
-    enet_model = joblib.load(column + '_enet_model.joblib')
+    enet_model = joblib.load('joblibs/' + column + '_enet_model.joblib')
     enet_prediction = enet_model.predict(user_data)
     predictions.append([Lasso_prediction[0], SVM_prediction[0],enet_prediction[0]])
 
