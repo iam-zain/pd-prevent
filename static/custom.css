@@ -76,3 +76,11 @@ div#resultModalBody {
 .result-text-display {
   font-size: 2em;
 }
+
+.header-desc {
+  flex: 1;
+}
+
+a.nav-link.disabled {
+  cursor: not-allowed;
+}
